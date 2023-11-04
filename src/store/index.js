@@ -1,5 +1,5 @@
 import { createStore } from 'vuex';
-import user from './modules/store.user'
+import user from './modules/store.user.js'
 
 export default createStore({
     strict: true,
@@ -7,19 +7,15 @@ export default createStore({
       user
     },
     state: {
-     title: 'hello from store vuex',
     },
     getters: {
-      getTitle(state){
-        return state.title;
-      }
     },
     mutations: {
-      setTitle(state, value){
-        state.title = value
-      }
     },
     actions: {
+     sayHi(){
+      alert('hi!')
+     }
     }
   })
   
