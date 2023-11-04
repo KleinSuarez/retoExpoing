@@ -38,10 +38,9 @@
                     <span>compartir</span>
                 </div>
             </div>
-            <Comments v-if="post.showComments
-                && post.id === 
+            <Comments v-if="post.showComments &&
                 selectedPost != undefined
-                ? selectedPost.id
+                ? post.id === selectedPost.id
                 : false" :comments="post.comments" />
         </div>
     </div>
@@ -59,14 +58,19 @@ export default {
         Comments
     },
     computed: {
-        selectedPost(){
+        selectedPost() {
             return this.$store.getters.getSelectedPost;
         }
     },
     methods: {
-        selectPost(post){
-            console.log(post)
-            this.$store.commit('setSelectedPost', post);
+        selectPost(post) {
+            if (this.selectedPost != undefined
+                ? post.id === this.selectedPost.id
+                : false) {
+                this.$store.commit('setSelectedPost', {});
+            } else {
+                this.$store.commit('setSelectedPost', post);
+            }
         }
     }
 }

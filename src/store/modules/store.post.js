@@ -24,8 +24,14 @@ export default {
                     username: 'Ribhelly',
                     description: 'wow',
                     date: '2023-11-04'
-                }],
-                showComments: false,
+                },{
+                    id: 2,
+                    username: 'Elkin',
+                    description: 'me levante a las 8',
+                    date: '2023-11-05'
+                },
+                ],
+                showComments: true,
                 media: 'https://i.postimg.cc/0Q7JHQhq/otra.jpg',
                 date: '04-11-2023'
             },
@@ -78,7 +84,7 @@ export default {
         setFilteredPosts(state, posts) {
             state.filteredPosts = posts;
         },
-        setSelectedPost(state, posts){
+        setSelectedPost(state, posts) {
             state.selectedPost = posts;
         }
     },
