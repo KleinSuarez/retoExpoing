@@ -30,4 +30,13 @@ export default [
       requireAdmin: false,
     }
   },
+  {
+    path: '/publicaciones',
+    name: 'publicaciones',
+    component: () => import(/* webpackChunkName: "login" */'@/views/publicacion/Publicaciones'),
+    meta: {
+      requiresAuth: false,
+      requireAdmin: false,
+    }
+  },
 ]
