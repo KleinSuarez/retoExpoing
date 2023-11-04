@@ -31,9 +31,9 @@ export default [
     }
   },
   {
-    path: '/publicaciones',
-    name: 'publicaciones',
-    component: () => import(/* webpackChunkName: "login" */'@/views/publicacion/Publicaciones'),
+    path: '/posts',
+    name: 'post',
+    component: () => import(/* webpackChunkName: "post" */'@/views/post/Posts'),
     meta: {
       requiresAuth: false,
       requireAdmin: false,

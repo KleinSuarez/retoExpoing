@@ -1,10 +1,12 @@
 import { createStore } from 'vuex';
-import user from './modules/store.user.js'
+import user from './modules/store.user.js';
+import post from './modules/store.post.js';
 
 export default createStore({
     strict: true,
     modules: {
-      user
+      user,
+      post
     },
     state: {
     },
@@ -13,9 +15,6 @@ export default createStore({
     mutations: {
     },
     actions: {
-     sayHi(){
-      alert('hi!')
-     }
     }
   })
   
