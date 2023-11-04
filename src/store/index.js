@@ -1,20 +1,22 @@
 import { createStore } from 'vuex';
+import user from './modules/store.user'
 
 export default createStore({
     strict: true,
     modules: {
+      user
     },
     state: {
-     storetitle: 'hello from store vuex',
+     title: 'hello from store vuex',
     },
     getters: {
-      getStoreTitle(state){
-        return state.storetitle;
+      getTitle(state){
+        return state.title;
       }
     },
     mutations: {
       setTitle(state, value){
-        state.storetitle = value
+        state.title = value
       }
     },
     actions: {
