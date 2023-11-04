@@ -69,6 +69,7 @@ export default {
         },
 
         async login({ mutations, getters }) {
+            console.log("ingreso")
             const formdata = {
                 email: getters.getUser.email,
                 password: getters.getPassword,
@@ -86,6 +87,12 @@ export default {
                     }
                 })
                 .catch(err => console.error(err))
+        },
+        async registroPublicaciones({ mutations, getters }){
+          
+            
+            console.log("ingreso")
+
         }
     }
 }
