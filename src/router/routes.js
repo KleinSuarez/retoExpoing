@@ -30,4 +30,13 @@ export default [
       requireAdmin: false,
     }
   },
+  {
+    path: '/posts',
+    name: 'post',
+    component: () => import(/* webpackChunkName: "post" */'@/views/post/Posts'),
+    meta: {
+      requiresAuth: false,
+      requireAdmin: false,
+    }
+  },
 ]

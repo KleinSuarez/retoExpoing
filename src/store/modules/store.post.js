@@ -9,7 +9,8 @@ export default {
             userId: '',
             comments: [],
             showComments: false,
-            media: {}
+            media: {},
+            date: ''
         },
         posts: [],
         filteredPosts: [],
