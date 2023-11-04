@@ -14,8 +14,17 @@ export default [
   },
   {
     path: '/registro',
-    name: 'SingUp',
+    name: 'singUp',
     component: () => import(/* webpackChunkName: "singup" */'@/views/sessions/SingUp'),
+    meta: {
+      requiresAuth: false,
+      requireAdmin: false,
+    }
+  },
+  {
+    path: '/iniciar',
+    name: 'login',
+    component: () => import(/* webpackChunkName: "login" */'@/views/sessions/Login'),
     meta: {
       requiresAuth: false,
       requireAdmin: false,
