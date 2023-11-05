@@ -39,4 +39,14 @@ export default [
       requireAdmin: false,
     }
   },
+  ,
+  {
+    path: '/posts/create',
+    name: 'postcreate',
+    component: () => import(/* webpackChunkName: "post-create" */'@/views/post/Publicaciones'),
+    meta: {
+      requiresAuth: false,
+      requireAdmin: false,
+    }
+  },
 ]

@@ -55,6 +55,9 @@ export default {
                 }
             })
             .catch(err => console.error(err))
+        },
+        async registroPublicaciones({getters}){
+            console.log("llego al log",getters);
         }
-    }
+    },
 }
